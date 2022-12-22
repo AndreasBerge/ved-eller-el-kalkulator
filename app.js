@@ -17,8 +17,6 @@ function calculator(vedPris, virkningsGrad, spotPris) {
     const virkningsGradFac = virkningsGrad / 100;
     const netEffect = virkningsGradFac * 65;
     const elPris = (netEffect * spotPris) / 100;
-    resetButton.style.display = "inline";
-    resDiv.classList.add("resDivAfter");
     if (Number(elPris) === Number(vedPris)) { res1.style.display = "none"; return res0.textContent = "Lik pris!" }
     else if (Number(elPris) > Number(vedPris)) {
         const difference = elPris - vedPris;
@@ -27,8 +25,10 @@ function calculator(vedPris, virkningsGrad, spotPris) {
     } else {
         const difference = vedPris - elPris;
         res0.textContent = "I dette tilfellet er elektrisk oppvarming rimeligere!";
-        res1.textContent = `Man sparer ${difference.toLocaleString()} kr per vedsekk.`;
+        res1.textContent = `Ved er ${difference.toLocaleString()} kr dyrere per sekk.`;
     }
+    resetButton.style.display = "inline";
+    resDiv.classList.add("resDivAfter");
 }
 
 function resetValues() {
@@ -42,14 +42,10 @@ function resetValues() {
     inp3.value = null;
 }
 
-
-
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     calculator(inp1.value, inp2.value, inp3.value);
 })
-
-
 
 resetButton.addEventListener("click", (e) => {
     resetValues();
