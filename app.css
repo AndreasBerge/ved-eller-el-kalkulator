@@ -1,0 +1,179 @@
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 1.25rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("ivan-stern-NZxky65YWs0-unsplash.jpg");
+    background-color: black;
+    height: 100%;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+}
+
+em {
+    color: rgb(220, 217, 217);
+    font-size: 0.9rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+div {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 50%;
+    max-width: 500px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input,
+label {
+    margin: 8px 0;
+}
+
+label {
+    font-size: 1.05rem;
+}
+
+input {
+    color: white;
+    background-color: #222524;
+    border-radius: 10px;
+    border: 1px rgba(212, 208, 202, 0.858) solid;
+    font-size: 1rem;
+    padding: 14px;
+    padding-left: 14px;
+}
+
+.nav {
+    text-align: center;
+}
+
+.navButton {
+    font-size: 0.9rem;
+    border: none;
+    min-width: 168px;
+    margin: 5px;
+    padding: 10px 8px;
+    border-radius: 0;
+}
+
+button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    margin: 8px 0 4px;
+    padding: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submitButton {
+    letter-spacing: 0.5px;
+    padding: 15px;
+    color: orange;
+    border: 2px rgba(212, 208, 202, 0.724) solid;
+    border-radius: 10px;
+    background: #383c3b;
+}
+
+.resetButton {
+    border: none;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    display: none;
+    box-shadow: none;
+    background-color: rgb(233, 78, 78);
+    padding: 10px 17px;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+#submitButton:active {
+    opacity: 1;
+    color: rgba(255, 166, 0, 0.67);
+}
+
+.resDiv {
+    background-color: #222524;
+    width: 99.5%;
+    text-align: center;
+    height: 0;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+    opacity: 0;
+}
+
+.resDivAfter {
+    height: auto;
+    padding: 7px 0;
+    border: 1px rgba(205, 206, 206, 0.5) solid;
+    border-radius: 10px;
+    opacity: 1;
+    transition: 300ms;
+}
+
+p {
+    line-height: 1.5rem;
+    margin: 5px 15px;
+}
+
+@media (max-width: 1280px) {
+    html {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("ivan-stern-NZxky65YWs0-unsplashSMALL.jpg");
+    }
+}
+
+@media (min-width: 580px) {
+    div {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 580px) {
+    div {
+        width: 80%;
+    }
+
+    .navButton {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 450px) {
+    div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 390px) {
+    .navButton {
+        display: block;
+        margin: 0;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
