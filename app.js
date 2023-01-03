@@ -21,7 +21,7 @@ function calculator(vedPris, virkningsGrad, spotPris) {
     else if (Number(elPris) > Number(vedPris)) {
         const difference = elPris - vedPris;
         res0.textContent = `I dette tilfellet er det rimeligere å fyre med ved!`;
-        res1.textContent = `Man sparer ${difference.toLocaleString()} kr per vedsekk.`;
+        res1.textContent = `Man sparer ${difference.toLocaleString()} kr per sekk.`;
     } else {
         const difference = vedPris - elPris;
         res0.textContent = "I dette tilfellet er elektrisk oppvarming rimeligere!";
