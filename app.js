@@ -21,11 +21,11 @@ function calculator(vedPris, virkningsGrad, spotPris) {
     const elPris = (netEffect * spotPris) / 100;
     if (Number(elPris) === Number(vedPris)) { res1.style.display = "none"; return res0.textContent = "Lik pris!" }
     else if (Number(elPris) > Number(vedPris)) {
-        const difference = (elPris - vedPris).toFixed(1);
+        const difference = (elPris - vedPris).toFixed(2);
         res0.textContent = `I dette tilfellet er det rimeligere å fyre med ved!`;
         res1.textContent = `Man sparer ${difference.toLocaleString()} kr per sekk.`;
     } else {
-        const difference = (vedPris - elPris.toFixed(1));
+        const difference = (vedPris - elPris.toFixed(2));
         res0.textContent = "I dette tilfellet er elektrisk oppvarming rimeligere!";
         res1.textContent = `Ved er ${difference.toLocaleString()} kr dyrere per sekk.`;
     }
