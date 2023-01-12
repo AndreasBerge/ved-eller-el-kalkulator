@@ -18,16 +18,10 @@ em {
     font-size: 0.9rem;
 }
 
-#hvakosterstrommen {
-    margin-top: 15px;
-    margin-bottom: 0;
-}
-
 h3 {
     font-size: 1.35rem;
     /* font-weight: 200; */
     margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 div {
@@ -51,15 +45,6 @@ label {
 
 label {
     font-size: 1.05rem;
-}
-
-select {
-    padding: 12px;
-    font-size: 0.8rem;
-    border-radius: 10px;
-    background-color: #222524;
-    color: rgb(186, 185, 185);
-    margin-bottom: 2px;
 }
 
 input {

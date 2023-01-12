@@ -13,9 +13,6 @@
     <h1>Vedpris vs. Strømpris</h1>
     <nav class="nav">
         <em>OBS! Denne kalkulatoren tar ikke stilling til strømstøtten!</em>
-        <p id="hvakosterstrommen"><a href="https://www.hvakosterstrommen.no"><img
-                    src="https://ik.imagekit.io/ajdfkwyt/hva-koster-strommen/strompriser-levert-av-hvakosterstrommen_oTtWvqeiB.png"
-                    alt="Strømpriser levert av Hva koster strømmen.no" width="200" height="45"></a></p>
     </nav>
 
     <div>
@@ -31,22 +28,11 @@
             <label for="inp2">Ildstedets virkningsgrad:</label>
             <input id="inp2" type="number" placeholder="%" required step="0.01" min="0.01">
             <label for="inp3">Strømpris i øre/kWh:</label>
-            <select name="" id="">
-                <option value="">Velg område (eller legg til pris manuelt i feltet under)</option>
-                <option value="NO1">Oslo / Øst-Norge</option>
-                <option value="NO2">Kristiansand / Sør-Norge</option>
-                <option value="NO3">Trondheim / Midt-Norge</option>
-                <option value="NO4">Tromsø / Nord-Norge</option>
-                <option value="NO5">Bergen / Vest-Norge</option>
-            </select>
-            <input id="inp3" type="number" required step="0.001" min="0.001">
+            <input id="inp3" type="number" required step="0.01" min="0.01">
             <button id="submitButton" type="submit">Kalkuler</button>
-
         </form>
-
     </div>
     <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 </body>
 
 
