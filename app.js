@@ -37,16 +37,16 @@ async function selectArea(area) {
     const dateNow = new Date;
     const year = dateNow.getFullYear();
     let month = dateNow.getMonth() + 1;
-    let day = dateNow.toLocaleDateString().split(".")[0];
-    if (day.length === 1) {
+    let day = dateNow.getDate();
+    if (String(day).length === 1) {
         day = "0" + day;
     };
-    if (month.toString().length === 1) {
+    if (String(month).length === 1) {
         month = "0" + month;
     };
     const strømPris = await axios.get(`https://www.hvakosterstrommen.no/api/v1/prices/${year}/${month}-${day}_${area}.json`);
     for (let pris of strømPris.data) {
-        let timeNow = new Date(pris.time_start);
+        const timeNow = new Date(pris.time_start);
         if (timeNow.getHours() === dateNow.getHours()) {
             if (area === "NO4") {
                 inp3.value = (pris.NOK_per_kWh * 100).toFixed(2);
