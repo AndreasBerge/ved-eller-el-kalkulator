@@ -15,13 +15,12 @@ const res1 = document.querySelector("#res1");
 const select = document.querySelector("select");
 
 function calculator(vedPris, virkningsGrad, spotPris) {
-    // console.log(vedPris, virkningsGrad, spotPris)
     const virkningsGradFac = virkningsGrad / 100;
     const netEffect = virkningsGradFac * 65;
     const elPris = (netEffect * spotPris) / 100;
     if (Number(elPris) === Number(vedPris)) { res1.style.display = "none"; return res0.textContent = "Lik pris!" }
     else if (Number(elPris) > Number(vedPris)) {
-        const difference = (elPris - vedPris).toFixed(2);
+        const difference = (elPris.toFixed(2) - vedPris);
         res0.textContent = `I dette tilfellet er det rimeligere å fyre med ved!`;
         res1.textContent = `Man sparer ${difference.toLocaleString()} kr per sekk.`;
     } else {
